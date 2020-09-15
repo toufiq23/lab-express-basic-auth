@@ -1,0 +1,29 @@
+<div id="form">
+	<h2 class="text-center text-white text-uppercase font-weight-bold my-5">Login</h2>
+	<form action="/login" method="POST" class="d-flex flex-column text-center">
+		<label for="input-email">
+			<h2>
+				<span class="badge badge-pill bg-primary m-3 px-5 py-3">
+					Email
+				</span>
+			</h2>
+		</label>
+		<input type="email" name="email" placeholder="Your email" id="input-email" class="form-control w-25 mx-auto text-center" />
+
+		<label for="input-password">
+			<h2>
+				<span class="badge badge-pill bg-primary mt-5 mb-3 px-5 py-3">
+					Password
+				</span>
+			</h2>
+		</label>
+		<input type="password" name="password" id="input-password" placeholder="********" class="form-control w-25 mx-auto mb-5 text-center" />
+
+		<button type="submit" class="btn btn-lg btn-success font-weight-bold mx-auto my-5 px-5">
+			Login
+		</button>
+		{{#if errorMessage}}
+			<p class="error">{{errorMessage}}</p>
+		{{/if}}
+	</form>
+</div>

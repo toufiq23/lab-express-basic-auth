@@ -1,9 +1,31 @@
 // User model here
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
-const userSchema = new Schema({
-  username: String,
-  password: String,
-});
-const User = mongoose.model("User", userSchema);
-module.exports = User;
+const { Schema, model } = require('mongoose');
+
+const userSchema = new Schema(
+	{
+		username: {
+			type: String,
+			trim: true,
+			required: [true, 'Username is required.'],
+			unique: true
+		},
+		email: {
+			type: String,
+			required: [true, 'Email is required.'],
+			unique: true,
+			lowercase: true,
+			trim: true,
+			match: [/.*@.*\..*/, 'Invalid email']
+		},
+		passwordHash: {
+			type: String,
+			required: [true, 'Password is required.']
+		}
+		// add password property here
+	},
+	{
+		timestamps: true
+	}
+);
+
+module.exports = model('User', userSchema);

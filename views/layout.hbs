@@ -6,13 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{title}}</title>
+		{{!-- Bootstrap CSS CDN --}}
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
 
   <body>
+		<nav class="navbar navbar-dark bg-info pb-0">
+			<a class="text-white text-lg font-weight-bold" href="/">Users - demo</a>
+			<div id="to-right">
+				<a href="/signup" class="text-dark font-weight-bold">Signup</a>
+				<span> | </span>
+				<a href="/login" class="text-dark font-weight-bold">Login</a>
+				<span> | </span>
+				<form id="logout-form" class="mb-n3" action="/logout" method="POST">
+					<button class="btn btn-sm btn-danger font-weight-bold">Logout</button>
+				</form>
+			</div>
+		</nav>
 
     {{{body}}}
 
+		{{!-- Bootstrap Jquery and Popper CDN--}}
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		{{!-- My own script.js --}}
     <script src="/javascripts/script.js"></script>
   </body>
 

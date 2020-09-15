@@ -1,0 +1,25 @@
+<div id="signup" class="my-4">
+	<h2 class="text-center bg-danger mx-auto p-3 w-25 sticky-top rounded">Signup</h2>
+	<form action="/signup" method="POST" class="d-flex flex-column">
+		<label class="mx-auto my-4 text-center">
+			<h2><span class="badge badge-pill bg-primary my-3">Username</span>
+				<input type="text" name="username" placeholder="Your username" class="form-control mx-auto" />
+			</h2>
+		</label>
+		<label class="mx-auto my-2 text-center">
+			<h2><span class="badge badge-pill bg-primary m-3">Email</span>
+				<input type="email" id="input-email" name="email" placeholder="Your email" class="form-control mx-auto" />
+			</h2>
+		</label>
+
+		<label class="mx-auto my-4 text-center">
+			<h2><span class="badge badge-pill bg-primary m-3">Password</span>
+				<input type="password" name="password" id="input-password" placeholder="*********" class="form-control mx-auto" />
+			</h2>
+		</label>
+
+		<button class="btn btn-lg btn-primary mx-auto my-3 w-15">Create account</button>
+
+		{{!-- error message will be added here --}}
+	</form>
+</div>

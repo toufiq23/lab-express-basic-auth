@@ -1,8 +1,36 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS0jLUYes-B2fc3lu0S57T6mFqepsZI-twTmg&usqp=CAU);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-a {
-  color: #00B7FF;
+nav a {
+	color: #00B7FF;
+	text-decoration: none;
+  font-size: 1.5em;
+}
+
+.error {
+  background: #f02b63;
+  box-sizing: border-box;
+  color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+}
+
+#to-right {
+  padding: 1em 8em;
+}
+
+#to-right span {
+  color: #fff;
+	font-size: 1.5em;
+	padding: 0.7em;
+}
+
+#logout-form {
+	transform: translate(230px, -25px);
 }
